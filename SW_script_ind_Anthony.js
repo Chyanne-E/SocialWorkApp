@@ -1,4 +1,12 @@
-$(document).ready(function() {
+function anthonyData(a, b, c) {
+
+  if (a == 1) {
+    document.getElementById("cont_Alexa").remove();
+  } else if (b == 1) {
+    document.getElementById("cont_Arlene").remove();
+  } else if (c == 1) {
+    document.getElementById("cont_Anita").remove();
+  }
 
   var HORIZONTAL = false;   // `false` for vertical (column) chart, `true` for horizontal bar
   var STACKED = false;  // `false` for individual bars, `true` for stacked bars
@@ -114,4 +122,4 @@ $(document).ready(function() {
 
   });
 
-});
+}
