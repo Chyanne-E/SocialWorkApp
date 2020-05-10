@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Practice Chart</title>
+    <meta name="viewport"> //content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="canvas.css">
+
+    <!-- Load jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Load Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <!-- Load D3.js to read csv files -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+  </head>
+  <body>
+
+    <button id="b" type="button">Anita</button>
+    <button id="b2" type="button">Anthony</button>
+    <canvas id="cont_Arlene"></canvas>
+    <canvas id="cont_Anthony"></canvas>
+<div class='bar-displayh'>
+  <div style='width:60%; margin: auto'>
+    <canvas id="cont_bar"></canvas>
+    <select [(ngModel)]='Date' style='width: 150px; height: 30px'>
+      <option value='2019-11-01'> November 1, 2019 </option>
+      <option value='2019-12-01'> December 1, 2019 </option>
+    </select>&nbsp;&nbsp;
+    <button class='button' (click)='applyFilter(filterLimit)'>Apply Filter</button>
+  </div>
+</div>
+
+    <script>
+    // define the default configuration
+    const defaultLine = {
+        type: 'line',
+        data: lineAlexa
+    }
+
+    // create the chart with the default configuration
+    var ctx = document.getElementById('lineChart').getContext('2d');
+    var chart = new Chart(ctx, defaultLine);
+
+    // add event listeners for the buttons
+    document.getElementById("b").addEventListener('click', () => {
+      //  const chart = document.getElementById("myChart");
+      chart.data = lineAnita});
+      chart.update();
+
+    document.getElementById("b2").addEventListener('click', () => {
+      //const chart = document.getElementById("myChart");
+      chart.data= lineAnthony});
+      chart.update();
+
+    </script>
+    </body>
+    </html>
+
+
+      <script src="SW_script_ind_Arlene.js"></script>
+      <script src="SW_script_ind_Anthony.js"></script>
+      <script src="SW_script_team_bar.js"></script>
+      <script>
+      document.getElementById("b").addEventListener('click', () => {
+        const chart = document.getElementById("cont_Anthony");
+        chart.data = lineArlene;
+        chart.update();
+      });
+      </script>
+
+  </body>
+
+</html>
