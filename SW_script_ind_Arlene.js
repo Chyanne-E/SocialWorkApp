@@ -1,5 +1,18 @@
-$(document).ready(function() {
+// $(document).ready(function() {
+// $("button#cont_Arlene").on("click", function() {
+function arleneData(a, b, c) {
+  if (a == 1) {
+    document.getElementById("cont_Anthony").remove();
+  } else if (b == 1) {
+    document.getElementById("cont_Arlexa").remove();
+  } else if (c == 1) {
+    document.getElementById("cont_Anita").remove();
+  }
 
+  // document.getElementById("cont_Anthony").remove();
+  // document.getElementById("cont_Alexa").remove();
+  // document.getElementById("cont_Anita").remove();
+// console.log("Something is happeningn")
   var HORIZONTAL = false;   // `false` for vertical (column) chart, `true` for horizontal bar
   var STACKED = false;  // `false` for individual bars, `true` for stacked bars
 
@@ -114,4 +127,4 @@ $(document).ready(function() {
 
   });
 
-});
+}
